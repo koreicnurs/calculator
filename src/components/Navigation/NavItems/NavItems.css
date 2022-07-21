@@ -1,0 +1,39 @@
+.Nav-Items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    height: 100%;
+}
+
+.Nav-Item {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.Nav-Item a {
+    color: white;
+    height: 100%;
+    padding: 16px 10px;
+    border-bottom: 4px solid transparent;
+
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+
+.Nav-Item a:hover,
+.Nav-Item a:active,
+.Nav-Item a.active {
+    background-color: deepskyblue;
+    border-bottom: 4px solid #00ffcb;
+    color: white;
+}
+
+
