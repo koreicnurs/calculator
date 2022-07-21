@@ -73,6 +73,7 @@ html {
     user-select: none;
 
     transition: all 0.2s ease;
+    font-size: 25px;
 }
 
 .keys button.eval {
@@ -103,10 +104,12 @@ html {
     top: 4px;
 }
 
-.screen .green {
-    background: green;
+.top .correct {
+    background: #12bd00;
+    font-size: 15px;
 }
 
-.top .green {
-    background: #12bd00;
+.top .incorrect {
+    background: rgba(210, 44, 44, 0.66);
+    font-size: 25px;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
-import './Toolbar.css';
 import NavItems from "../NavItems/NavItems";
+import './Toolbar.css';
 
 const Toolbar = () => {
     return (

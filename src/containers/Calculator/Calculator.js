@@ -30,12 +30,12 @@ const Calculator = () => {
                     <button onClick={() => addNumber(7)}>7</button>
                     <button onClick={() => addNumber(8)}>8</button>
                     <button onClick={() => addNumber(9)}>9</button>
-                    <button onClick={() => addNumber(0)}>0</button>
                     <button onClick={() => addNumber('*')}>*</button>
+                    <button onClick={() => addNumber(0)}>0</button>
                     <button onClick={() => addNumber('/')}>/</button>
                     <button onClick={() => addNumber('-')}>-</button>
-                    <button onClick={() => addNumber('+')}>+</button>
                     <button className='clear' onClick={del}>&lt;</button>
+                    <button onClick={() => addNumber('+')}>+</button>
                     <button className='clear' onClick={clear}>C</button>
                     <button className='eval' onClick={result}>=</button>
                 </div>

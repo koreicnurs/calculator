@@ -5,18 +5,18 @@ import './Counter.css';
 const Counter = () => {
     const history = useSelector(state => state.numbers);
     const status = useSelector(state => state.status);
+    const hide = useSelector(state => state.hide);
     const dispatch = useDispatch();
 
     const addNumber = (number) => dispatch({type: 'ADD', payload: number});
     const result = () => dispatch({type: 'RES'});
     const del = () => dispatch({type: 'DEL'});
 
-    // {status ? 'screen green' : 'screen'}
     return (
         <>
             <div className="enter">
                 <div className="top">
-                    <div className='screen'>{history.replace(/./gm, '*')}</div>
+                    <div className={`screen ${status}`}>{hide ? history.replace(/./gm, '*') : history}</div>
                 </div>
 
                 <div className="keys">

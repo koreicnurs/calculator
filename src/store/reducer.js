@@ -3,6 +3,7 @@ const initialStore = {
     numbers: '',
     pass: '2222',
     status: '',
+    hide: true,
 };
 
 const reducer = (state = initialStore, action) => {
@@ -17,16 +18,14 @@ const reducer = (state = initialStore, action) => {
 
     if (action.type === 'ADD_NUMBER') {
         return {...state, numbers: state.numbers + action.payload};
-
     }
 
     if (action.type === 'RES') {
         if (state.numbers === state.pass) {
-            return {...state, status: 'correct'};
+            return {...state, status: 'correct', hide: false, numbers: 'Access Granted'};
         } else {
-            return {...state, status: 'incorrect'};
+            return {...state, status: 'incorrect', hide: false, numbers: 'Access Denied'};
         }
-
     }
 
     if (action.type === 'RES_NUMBER') {
@@ -34,7 +33,10 @@ const reducer = (state = initialStore, action) => {
     }
 
     if (action.type === 'DEL') {
-        return {...state, numbers: state.numbers.substring(0, state.numbers.length - 1), status: false};
+        if(state.numbers === 'Access Granted' || state.numbers === 'Access Denied'){
+            return {...state, numbers: '', status: ''};
+        }
+        return {...state, numbers: state.numbers.substring(0, state.numbers.length - 1), status: ''};
     }
 
     if (action.type === 'DEL_NUMBER') {
